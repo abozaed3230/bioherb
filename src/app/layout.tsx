@@ -3,39 +3,53 @@ import './globals.css';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import App from './App';
 import { SpecialOffer } from '@/components/landing/SpecialOffer';
-import FacebookPixel from '@/components/FacebookPixel';
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://pharbah.shop'),
+  metadataBase: new URL('https://bioherb-eg.com'),
   title: {
     default: 'بايو هيرب - الحل الطبيعي لصحة الجهاز الهضمي | BioHerb',
     template: '%s | بايو هيرب BioHerb',
   },
-  description: 'بايو هيرب هو مكمل عشبي طبيعي 100%...',
-  openGraph: {
-    title: 'بايو هيرب - الحل الطبيعي لصحة الجهاز الهضمي | BioHerb',
-    description: 'اكتشف BioHerb ...',
-    url: 'https://pharbah.shop',
-    siteName: 'BioHerb',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'منتج بايو هيرب',
-      },
-    ],
-    locale: 'ar_EG',
-    type: 'website',
-  },
+  description:
+    'بايو هيرب هو مكمل عشبي طبيعي 100% لدعم صحة المعدة والقولون...',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ar" dir="rtl">
       <head>
-        {/* ✅ استدعاء المكون المنفصل للبكسل */}
-        <FacebookPixel />
+        {/* ✅ ✅ ✅ الكود الصحيح للبكسل */}
+        <Script
+          id="facebook-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s){
+                if(f.fbq)return;n=f.fbq=function(){
+                  n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+                };
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)
+              }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+              
+              fbq('init', '2204103556666958');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=2204103556666958&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
       </head>
 
       <body>
