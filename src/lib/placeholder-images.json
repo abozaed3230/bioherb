@@ -1,0 +1,88 @@
+{
+  "placeholderImages": [
+    {
+      "id": "bioherb-powder-3d",
+      "description": "BioHerb  مسحوق عشبي طبيعي 100% لدعم صحة المعدة والقولون. يساعد على التخلص من الانتفاخ وحرقة المعدة، ويمنحك راحة هضمية من أول يوم. منتج آمن، فعّال وسهل الاستخدام. اطلبه الآن واستمتع بحياة صحية مريحة.",
+      "imageUrl": "/images/hero-bioherb.jpg",
+      "imageHint": "supplement powder jar with dark herbal drink"
+    },
+    {
+      "id": "avatar1",
+      "description": "Avatar for a male customer testimonial.",
+      "imageUrl": "/images/customer7.jpg",
+      "imageHint": "male customer face"
+    },
+    {
+      "id": "avatar2",
+      "description": "Avatar for a female customer testimonial.",
+      "imageUrl": "/images/customer8.jpg",
+      "imageHint": "woman face"
+    },
+    {
+      "id": "avatar3",
+      "description": "Avatar for a male customer testimonial.",
+      "imageUrl": "/images/20.jpg",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "avatar5",
+      "description": "Avatar for a customer testimonial.",
+      "imageUrl": "/images/customer9.jpg",
+      "imageHint": "happy customer face"
+    },
+    {
+      "id": "avatar16",
+      "description": "Avatar for testimonial16",
+      "imageUrl": "/images/21.jpg",
+      "imageHint": "smiling customer"
+    },
+     {
+      "id": "avatar80",
+      "description": "Avatar for a female customer testimonial.",
+      "imageUrl": "/images/24.jpg",
+      "imageHint": "smiling woman"
+    },
+    {
+      "id": "one-month-supply",
+      "description": "Image of one bottle of BioHerb supplement.",
+      "imageUrl": "/images/16.jpg",
+      "imageHint": "supplement bottle"
+    },
+    {
+      "id": "three-month-supply",
+      "description": "Image of three bottles of BioHerb supplement.",
+      "imageUrl": "/images/oil250.jpg",
+      "imageHint": "supplement bottles"
+    },
+    {
+      "id": "family-pack",
+      "description": "Image of six bottles of BioHerb supplement.",
+      "imageUrl": "/images/13.jpg",
+      "imageHint": "supplement bottles stack"
+    },
+    {
+      "id": "lifestyle1",
+      "description": "A happy person enjoying a meal without digestive issues.",
+      "imageUrl": "/images/15.jpg",
+      "imageHint": "person eating happily"
+    },
+    {
+      "id": "lifestyle2",
+      "description": "A group of friends laughing and dining together.",
+      "imageUrl": "/images/14.jpg",
+      "imageHint": "friends dining"
+    },
+    {
+      "id": "lifestyle3",
+      "description": "A person feeling relaxed and content.",
+      "imageUrl": "/images/12.jpg",
+      "imageHint": "person relaxed"
+    },
+    {
+      "id": "lifestyle-video1",
+      "description": "Promo lifestyle video.",
+      "videoUrl": "/videos/bioherb-lifestyle.mp4",
+      "imageHint": "lifestyle promo video"
+    }
+  ]
+}

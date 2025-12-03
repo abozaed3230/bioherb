@@ -1,0 +1,93 @@
+import type { Metadata } from 'next';
+import './globals.css';
+import { LanguageProvider } from '@/contexts/LanguageContext';
+import App from './App';
+import { SpecialOffer } from '@/components/landing/SpecialOffer';
+
+
+// Default metadata, can be overridden by pages
+export const metadata: Metadata = {
+  metadataBase: new URL('https://bioherb-eg.com'),
+  title: {
+    default: 'بايو هيرب - الحل الطبيعي لصحة الجهاز الهضمي | BioHerb',
+    template: '%s | بايو هيرب BioHerb',
+  },
+  description: 'بايو هيرب هو مكمل عشبي طبيعي 100% لدعم صحة المعدة والقولون، وتوفير الراحة من الانتفاخ، حرقة المعدة، ومشاكل الجهاز الهضمي. آمن وفعال ومسجل.',
+  keywords: ['BioHerb', 'بايو هيرب', 'صحة الجهاز الهضمي', 'علاج القولون', 'جرثومة المعدة', 'مكمل غذائي', 'أعشاب طبيعية', 'حرقة المعدة', 'الانتفاخ'],
+  openGraph: {
+    title: 'بايو هيرب - الحل الطبيعي لصحة الجهاز الهضمي | BioHerb',
+    description: 'اكتشف BioHerb، المكمل العشبي الطبيعي 100% لراحة المعدة والقولون. آمن، فعال، وسريع النتائج.',
+    url: 'https://bioherb-eg.com',
+    siteName: 'BioHerb',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'منتج بايو هيرب الطبيعي',
+      },
+    ],
+    locale: 'ar_EG',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'بايو هيرب - الحل الطبيعي لصحة الجهاز الهضمي | BioHerb',
+    description: 'ودّع مشاكل الجهاز الهضمي مع BioHerb. الحل الطبيعي والآمن للانتفاخ وحرقة المعدة.',
+    images: ['/twitter-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="ar" dir="rtl">
+
+      <head>
+        {/* Meta Pixel Code */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '2204103556666958');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=2204103556666958&ev=PageView&noscript=1"
+          />
+        </noscript>
+        {/* End Meta Pixel */}
+      </head>
+
+      <body>
+        <App>
+          <SpecialOffer />
+          {children}
+        </App>
+      </body>
+    </html>
+  );
+}
