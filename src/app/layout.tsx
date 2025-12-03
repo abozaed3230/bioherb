@@ -4,8 +4,7 @@ import { LanguageProvider } from '@/contexts/LanguageContext';
 import App from './App';
 import { SpecialOffer } from '@/components/landing/SpecialOffer';
 
-
-// Default metadata, can be overridden by pages
+// Default metadata
 export const metadata: Metadata = {
   metadataBase: new URL('https://bioherb-eg.com'),
   title: {
@@ -52,7 +51,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ar" dir="rtl">
-
       <head>
         {/* Meta Pixel Code */}
         <script
