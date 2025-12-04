@@ -3,7 +3,7 @@ import './globals.css';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import App from './App';
 import { SpecialOffer } from '@/components/landing/SpecialOffer';
-import Script from 'next/script'; // ⬅️ هذا السطر مفقود!
+import Script from 'next/script'; // ⬅️ ⬅️ ⬅️ هذا السطر ضروري!
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pharbah.shop'),
@@ -11,23 +11,9 @@ export const metadata: Metadata = {
     default: 'بايو هيرب - الحل الطبيعي لصحة الجهاز الهضمي | BioHerb',
     template: '%s | بايو هيرب BioHerb',
   },
-  description:
-    'بايو هيرب هو مكمل عشبي طبيعي 100% لدعم صحة المعدة والقولون، وتوفير الراحة من الانتفاخ، حرقة المعدة، ومشاكل الجهاز الهضمي. آمن وفعال ومسجل.',
-  keywords: [
-    'BioHerb',
-    'بايو هيرب',
-    'صحة الجهاز الهضمي',
-    'علاج القولون',
-    'جرثومة المعدة',
-    'مكمل غذائي',
-    'أعشاب طبيعية',
-    'حرقة المعدة',
-    'الانتفاخ',
-  ],
+  description: 'بايو هيرب هو مكمل عشبي طبيعي 100% لدعم صحة المعدة والقولون.',
   openGraph: {
-    title: 'بايو هيرب - الحل الطبيعي لصحة الجهاز الهضمي | BioHerb',
-    description:
-      'اكتشف BioHerb، المكمل العشبي الطبيعي 100% لراحة المعدة والقولون. آمن، فعال، وسريع النتائج.',
+    title: 'بايو هيرب',
     url: 'https://pharbah.shop',
     siteName: 'BioHerb',
     images: [
@@ -35,29 +21,8 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'منتج بايو هيرب الطبيعي',
       },
     ],
-    locale: 'ar_EG',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'بايو هيرب - الحل الطبيعي لصحة الجهاز الهضمي | BioHerb',
-    description:
-      'ودّع مشاكل الجهاز الهضمي مع BioHerb. الحل الطبيعي والآمن للانتفاخ وحرقة المعدة.',
-    images: ['/twitter-image.png'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
 };
 
@@ -65,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ar" dir="rtl">
       <head>
-        {/* ✅ الكود الصحيح باستخدام مكون Script */}
+        {/* ✅ Meta Pixel Code - النسخة الصحيحة */}
         <Script
           id="facebook-pixel"
           strategy="afterInteractive"
@@ -91,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <img
             height="1"
             width="1"
-            style={{ display: 'none' }}
+            style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=2204103556666958&ev=PageView&noscript=1"
             alt=""
           />
